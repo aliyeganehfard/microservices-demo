@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <modules>
         <module>twitter-to-kafka-service</module>
+        <module>app-config-data</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -31,6 +32,14 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- local -->
+            <dependency>
+                <groupId>com.microservices.demo</groupId>
+                <artifactId>app-config-data</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- spring dependency-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
@@ -96,42 +105,4 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    <!--	<repositories>-->
-    <!--		<repository>-->
-    <!--			<id>spring-milestones</id>-->
-    <!--			<name>Spring Milestones</name>-->
-    <!--			<url>https://repo.spring.io/milestone</url>-->
-    <!--			<snapshots>-->
-    <!--				<enabled>false</enabled>-->
-    <!--			</snapshots>-->
-    <!--		</repository>-->
-    <!--		<repository>-->
-    <!--			<id>spring-snapshots</id>-->
-    <!--			<name>Spring Snapshots</name>-->
-    <!--			<url>https://repo.spring.io/snapshot</url>-->
-    <!--			<releases>-->
-    <!--				<enabled>false</enabled>-->
-    <!--			</releases>-->
-    <!--		</repository>-->
-    <!--	</repositories>-->
-    <!--	<pluginRepositories>-->
-    <!--		<pluginRepository>-->
-    <!--			<id>spring-milestones</id>-->
-    <!--			<name>Spring Milestones</name>-->
-    <!--			<url>https://repo.spring.io/milestone</url>-->
-    <!--			<snapshots>-->
-    <!--				<enabled>false</enabled>-->
-    <!--			</snapshots>-->
-    <!--		</pluginRepository>-->
-    <!--		<pluginRepository>-->
-    <!--			<id>spring-snapshots</id>-->
-    <!--			<name>Spring Snapshots</name>-->
-    <!--			<url>https://repo.spring.io/snapshot</url>-->
-    <!--			<releases>-->
-    <!--				<enabled>false</enabled>-->
-    <!--			</releases>-->
-    <!--		</pluginRepository>-->
-    <!--	</pluginRepositories>-->
-
 </project>
